@@ -1,40 +1,34 @@
+export const metadata = {
+  title: "Contact | Mohammad Amin",
+};
+
 export default function Contactpage() {
   return (
     <main className="mx-auto max-w-7xl px-6 py-16">
-
       <div className="mb-12">
         <p className="text-sm uppercase tracking-[0.3em] text-purple-400">
           Get In Touch
         </p>
 
-        <h1 className="mt-3 text-4xl font-bold sm:text-5xl">
-          Let's Connect
-        </h1>
+        <h1 className="mt-3 text-4xl font-bold sm:text-5xl">Let's Connect</h1>
 
         <p className="mt-4 max-w-2xl text-gray-500">
-          Have a project, idea or opportunity?
-          Feel free to get in touch with me.
+          Have a project, idea or opportunity? Feel free to get in touch with
+          me.
         </p>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-5">
-
         {/* INFO */}
         <div className="lg:col-span-2">
-
           <div className="h-full rounded-3xl border border-white/10 bg-[#111116] p-8">
-
-            <h2 className="text-2xl font-semibold">
-              Contact Information
-            </h2>
+            <h2 className="text-2xl font-semibold">Contact Information</h2>
 
             <p className="mt-3 text-sm leading-7 text-gray-500">
-              You can reach me through email or any of my
-              social platforms.
+              You can reach me through email or any of my social platforms.
             </p>
 
             <div className="mt-10 space-y-4">
-
               {/* Email */}
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
                 <p className="text-xs uppercase tracking-wider text-gray-600">
@@ -55,20 +49,16 @@ export default function Contactpage() {
                   Location
                 </p>
 
-                <p className="mt-2 text-sm text-gray-200">
-                  Tehran, Iran
-                </p>
+                <p className="mt-2 text-sm text-gray-200">Tehran, Iran</p>
               </div>
 
               {/* Social */}
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
-
                 <p className="text-xs uppercase tracking-wider text-gray-600">
                   Social
                 </p>
 
                 <div className="mt-4 grid grid-cols-2 gap-3">
-
                   {/* Instagram */}
                   <a
                     href="https://instagram.com/general-eshaghi"
@@ -108,29 +98,19 @@ export default function Contactpage() {
                   >
                     Telegram
                   </a>
-
                 </div>
-
               </div>
-
             </div>
           </div>
-
         </div>
 
         {/* FORM */}
         <div className="lg:col-span-3">
-
           <div className="rounded-3xl border border-white/10 bg-[#111116] p-8">
-
-            <h2 className="text-2xl font-semibold">
-              Send Me a Message
-            </h2>
+            <h2 className="text-2xl font-semibold">Send Me a Message</h2>
 
             <form className="mt-8 space-y-6">
-
               <div className="grid gap-5 sm:grid-cols-2">
-
                 <div>
                   <label className="mb-2 block text-sm text-gray-400">
                     Your Name
@@ -154,7 +134,6 @@ export default function Contactpage() {
                     className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3.5 text-sm outline-none transition placeholder:text-gray-700 focus:border-purple-500/50"
                   />
                 </div>
-
               </div>
 
               <div>
@@ -187,12 +166,9 @@ export default function Contactpage() {
               >
                 Send Message →
               </button>
-
             </form>
           </div>
-
         </div>
-
       </div>
     </main>
   );

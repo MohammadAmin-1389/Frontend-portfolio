@@ -1,6 +1,9 @@
 import Link from "next/link";
 import projects from "./projects";
 
+export const metadata = {
+  title: "Projects | Mohammad Amin",
+};
 export default function ProjectsPage() {
   return (
     <section className="min-h-screen bg-[#08080c] px-6 py-16">

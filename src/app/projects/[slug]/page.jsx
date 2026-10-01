@@ -1,6 +1,23 @@
 import Link from "next/link";
 import projects from "../projects";
 
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  const project = projects.find((project) => project.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Project Not Found | Mohammad Amin",
+    };
+  }
+
+  return {
+    title: `${project.title} | Mohammad Amin`,
+  };
+}
+
 export default async function ProjectDetails({ params }) {
   const { slug } = await params;
 
