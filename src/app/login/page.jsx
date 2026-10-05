@@ -2,7 +2,16 @@ export const metadata = {
   title: "Login | Mohammad Amin",
 };
 
-export default function Loginpage() {
+
+
+export default async function Loginpage() {
+
+   await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("hi");
+    }, 3000);
+  });
+
   return (
     <main className="relative flex min-h-[calc(100vh-80px)] items-center justify-center overflow-hidden px-6 py-16">
       <div className="absolute h-80 w-80 rounded-full bg-purple-600/20 blur-[120px]" />

@@ -2,7 +2,13 @@ export const metadata = {
   title: "Contact | Mohammad Amin",
 };
 
-export default function Contactpage() {
+export default async function Contactpage() {
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("hi");
+    }, 3000);
+  });
+
   return (
     <main className="mx-auto max-w-7xl px-6 py-16">
       <div className="mb-12">
@@ -19,7 +25,6 @@ export default function Contactpage() {
       </div>
 
       <div className="grid gap-8 lg:grid-cols-5">
-        {/* INFO */}
         <div className="lg:col-span-2">
           <div className="h-full rounded-3xl border border-white/10 bg-[#111116] p-8">
             <h2 className="text-2xl font-semibold">Contact Information</h2>
@@ -29,7 +34,6 @@ export default function Contactpage() {
             </p>
 
             <div className="mt-10 space-y-4">
-              {/* Email */}
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
                 <p className="text-xs uppercase tracking-wider text-gray-600">
                   Email
@@ -43,7 +47,6 @@ export default function Contactpage() {
                 </a>
               </div>
 
-              {/* Location */}
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
                 <p className="text-xs uppercase tracking-wider text-gray-600">
                   Location
@@ -52,14 +55,12 @@ export default function Contactpage() {
                 <p className="mt-2 text-sm text-gray-200">Tehran, Iran</p>
               </div>
 
-              {/* Social */}
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
                 <p className="text-xs uppercase tracking-wider text-gray-600">
                   Social
                 </p>
 
                 <div className="mt-4 grid grid-cols-2 gap-3">
-                  {/* Instagram */}
                   <a
                     href="https://instagram.com/general-eshaghi"
                     target="_blank"
@@ -69,7 +70,6 @@ export default function Contactpage() {
                     Instagram
                   </a>
 
-                  {/* YouTube */}
                   <a
                     href="https://youtube.com/@general-eshaghi"
                     target="_blank"
@@ -79,7 +79,6 @@ export default function Contactpage() {
                     YouTube
                   </a>
 
-                  {/* GitHub */}
                   <a
                     href="https://github.com/MohammadAmin-1389"
                     target="_blank"
@@ -89,7 +88,6 @@ export default function Contactpage() {
                     GitHub
                   </a>
 
-                  {/* Telegram */}
                   <a
                     href="https://t.me/sepahbod-eshaghi"
                     target="_blank"
@@ -104,7 +102,6 @@ export default function Contactpage() {
           </div>
         </div>
 
-        {/* FORM */}
         <div className="lg:col-span-3">
           <div className="rounded-3xl border border-white/10 bg-[#111116] p-8">
             <h2 className="text-2xl font-semibold">Send Me a Message</h2>

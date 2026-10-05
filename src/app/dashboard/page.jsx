@@ -34,10 +34,16 @@ const skills = [
 export const metadata = {
   title: "Dashboard | Mohammad Amin",
 };
-export default function Dashbordpage() {
+
+export default async function Dashbordpage() {
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("hi");
+    }, 3000);
+  });
+
   return (
     <main className="mx-auto max-w-7xl px-6 py-16">
-      {/* Header */}
       <div className="mb-10">
         <p className="text-sm uppercase tracking-[0.3em] text-purple-400">
           Developer Center
@@ -51,7 +57,6 @@ export default function Dashbordpage() {
         </p>
       </div>
 
-      {/* Stats */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-2xl border border-white/10 bg-[#111116] p-6">
           <p className="text-sm text-gray-500">Main Field</p>
@@ -86,9 +91,7 @@ export default function Dashbordpage() {
         </div>
       </div>
 
-      {/* Skills + Focus */}
       <div className="mt-6 grid gap-6 lg:grid-cols-3">
-        {/* Skills */}
         <div className="rounded-2xl border border-white/10 bg-[#111116] p-6 lg:col-span-2">
           <div>
             <h2 className="text-xl font-semibold">Technology Stack</h2>
@@ -124,7 +127,6 @@ export default function Dashbordpage() {
           </div>
         </div>
 
-        {/* Current Focus */}
         <div className="rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-600/10 to-[#111116] p-6">
           <p className="text-sm uppercase tracking-wider text-purple-400">
             Current Focus
@@ -153,7 +155,6 @@ export default function Dashbordpage() {
         </div>
       </div>
 
-      {/* Development Journey */}
       <div className="mt-6 rounded-2xl border border-white/10 bg-[#111116] p-6">
         <h2 className="text-xl font-semibold">Development Journey</h2>
 

@@ -4,7 +4,14 @@ import projects from "./projects";
 export const metadata = {
   title: "Projects | Mohammad Amin",
 };
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("hi");
+    }, 3000);
+  });
+  
   return (
     <section className="min-h-screen bg-[#08080c] px-6 py-16">
       <div className="mx-auto max-w-7xl">
