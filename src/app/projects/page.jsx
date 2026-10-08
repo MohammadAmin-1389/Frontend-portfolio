@@ -4,31 +4,27 @@ import projects from "./projects";
 export const metadata = {
   title: "Projects | Mohammad Amin",
 };
-export default async function ProjectsPage() {
 
-  await new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("hi");
-    }, 3000);
-  });
-  
+export default function ProjectsPage() {
   return (
-    <section className="min-h-screen bg-[#08080c] px-6 py-16">
-      <div className="mx-auto max-w-7xl">
+    <section className="min-h-screen px-6 py-16">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-12">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-purple-400">
             My Work
           </p>
 
-          <h1 className="text-4xl font-bold md:text-5xl">My Projects</h1>
+          <h1 className="text-4xl font-bold text-white md:text-5xl">
+            My Projects
+          </h1>
 
           <p className="mt-4 max-w-2xl text-gray-400">
             A collection of projects I have built while learning and improving
-            my frontend and web development skills.
+            my web development skills.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
             <div
               key={project.id}
@@ -41,8 +37,10 @@ export default async function ProjectsPage() {
               </div>
 
               <div className="p-6">
-                <div className="mb-3 flex items-center justify-between">
-                  <h2 className="text-xl font-semibold">{project.title}</h2>
+                <div className="mb-3 flex items-center justify-between gap-3">
+                  <h2 className="text-xl font-semibold text-white">
+                    {project.title}
+                  </h2>
 
                   <span className="rounded-full border border-purple-500/20 bg-purple-500/10 px-3 py-1 text-xs text-purple-300">
                     {project.type}

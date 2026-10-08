@@ -6,7 +6,7 @@ const projects = [
     description:
       "A modern real estate website built with React and modern frontend technologies.",
     longDescription:
-      "Saghfino is a real estate website project focused on creating a modern and user-friendly experience for discovering properties and real estate services.",
+      "Saghfino is a real estate website project focused on creating a modern and user-friendly experience.",
     technologies: ["React", "JavaScript", "Tailwind CSS"],
     type: "Frontend",
     github: "https://github.com/MohammadAmin-1389/Saghfino-proje",
@@ -18,7 +18,7 @@ const projects = [
     title: "Alibaba",
     description: "A frontend implementation of an e-commerce website.",
     longDescription:
-      "This project was created to practice building an e-commerce interface with reusable components and responsive layouts.",
+      "An e-commerce frontend project created to practice layouts, components and responsive design.",
     technologies: ["HTML", "CSS", "JavaScript"],
     type: "Frontend",
     github: "https://github.com/MohammadAmin-1389/alibaba",
@@ -30,7 +30,7 @@ const projects = [
     title: "New Alibaba",
     description: "A modern frontend implementation with responsive design.",
     longDescription:
-      "A frontend practice project focused on layout, styling, responsive design and creating a clean user interface.",
+      "A frontend project focused on layout, styling and responsive web development.",
     technologies: ["HTML", "CSS", "Sass"],
     type: "Frontend",
     github: "https://github.com/MohammadAmin-1389/new-alibaba",
@@ -42,7 +42,7 @@ const projects = [
     title: "Personal Portfolio",
     description: "My personal developer portfolio built with Next.js.",
     longDescription:
-      "A personal portfolio website created to showcase my skills, projects, experience and learning journey as a web developer.",
+      "A personal portfolio website created to showcase my skills and projects.",
     technologies: ["Next.js", "React", "Tailwind CSS"],
     type: "Frontend",
     github: "#",
@@ -54,7 +54,7 @@ const projects = [
     title: "Developer Dashboard",
     description: "A modern dashboard interface for developers.",
     longDescription:
-      "A dashboard UI focused on presenting information, statistics and development progress in a clean interface.",
+      "A dashboard UI focused on displaying statistics and development progress.",
     technologies: ["React", "Tailwind CSS", "JavaScript"],
     type: "Frontend",
     github: "#",
@@ -66,7 +66,7 @@ const projects = [
     title: "Weather App",
     description: "A responsive weather application interface.",
     longDescription:
-      "A weather application project created to practice working with APIs and building responsive interfaces.",
+      "A weather application project created to practice APIs and responsive interfaces.",
     technologies: ["JavaScript", "React", "CSS"],
     type: "Frontend",
     github: "#",
@@ -78,7 +78,7 @@ const projects = [
     title: "Todo App",
     description: "A simple task management application.",
     longDescription:
-      "A task management application created to practice state management and interactive UI development.",
+      "A task management application created to practice state management.",
     technologies: ["React", "JavaScript", "Tailwind CSS"],
     type: "Frontend",
     github: "#",
@@ -90,7 +90,7 @@ const projects = [
     title: "Login UI",
     description: "A modern login and authentication interface.",
     longDescription:
-      "A frontend authentication interface with login, registration and modern form components.",
+      "A frontend authentication interface with modern form components.",
     technologies: ["React", "Tailwind CSS"],
     type: "Frontend",
     github: "#",
@@ -102,7 +102,7 @@ const projects = [
     title: "Blog Website",
     description: "A modern blog interface.",
     longDescription:
-      "A blog interface designed to display articles, categories and detailed blog content using dynamic routes.",
+      "A blog interface designed to display articles and detailed content.",
     technologies: ["Next.js", "React", "Tailwind CSS"],
     type: "Frontend",
     github: "#",
@@ -114,7 +114,7 @@ const projects = [
     title: "Movie App",
     description: "A movie discovery frontend application.",
     longDescription:
-      "A movie application interface designed for discovering movies and displaying detailed information about each title.",
+      "A movie application interface designed for discovering movies.",
     technologies: ["React", "JavaScript", "CSS"],
     type: "Frontend",
     github: "#",
@@ -126,7 +126,7 @@ const projects = [
     title: "Admin Panel",
     description: "A clean and modern admin panel UI.",
     longDescription:
-      "An admin panel interface focused on displaying statistics, tables and management sections.",
+      "An admin panel interface focused on displaying statistics and tables.",
     technologies: ["React", "Tailwind CSS", "JavaScript"],
     type: "Frontend",
     github: "#",
@@ -138,7 +138,7 @@ const projects = [
     title: "Landing Page",
     description: "A modern responsive landing page.",
     longDescription:
-      "A responsive landing page created to practice modern layouts, typography, spacing and responsive frontend development.",
+      "A responsive landing page created to practice modern layouts.",
     technologies: ["HTML", "CSS", "JavaScript"],
     type: "Frontend",
     github: "#",

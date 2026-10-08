@@ -1,6 +1,6 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import projects from "../projects";
-
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -24,26 +24,11 @@ export default async function ProjectDetails({ params }) {
   const project = projects.find((project) => project.slug === slug);
 
   if (!project) {
-    return (
-      <section className="flex min-h-screen items-center justify-center bg-[#08080c] px-6">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold">404</h1>
-
-          <p className="mt-4 text-gray-400">Project not found.</p>
-
-          <Link
-            href="/projects"
-            className="mt-6 inline-block rounded-xl bg-purple-500 px-6 py-3 text-sm font-medium transition hover:bg-purple-600"
-          >
-            Back to Projects
-          </Link>
-        </div>
-      </section>
-    );
+    notFound();
   }
 
   return (
-    <section className="min-h-screen bg-[#08080c] px-6 py-16">
+    <section className="min-h-screen px-6 py-16">
       <div className="mx-auto max-w-5xl">
         <Link
           href="/projects"
@@ -59,18 +44,22 @@ export default async function ProjectDetails({ params }) {
             </span>
 
             <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-400">
-              #{project.id}
+              Project #{project.id}
             </span>
           </div>
 
-          <h1 className="text-4xl font-bold md:text-6xl">{project.title}</h1>
+          <h1 className="text-4xl font-bold text-white md:text-6xl">
+            {project.title}
+          </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-400">
             {project.longDescription}
           </p>
 
           <div className="mt-10">
-            <h2 className="mb-4 text-lg font-semibold">Technologies</h2>
+            <h2 className="mb-4 text-lg font-semibold text-white">
+              Technologies
+            </h2>
 
             <div className="flex flex-wrap gap-3">
               {project.technologies.map((tech) => (
