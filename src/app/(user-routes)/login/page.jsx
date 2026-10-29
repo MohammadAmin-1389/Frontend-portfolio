@@ -1,16 +1,32 @@
-export const metadata = {
-  title: "Login | Mohammad Amin",
-};
+"use client";
 
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 
+export default function Loginpage() {
+  const [ready, setReady] = useState(false);
 
-export default async function Loginpage() {
-
-   await new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("hi");
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setReady(true);
     }, 3000);
-  });
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  if (!ready) {
+    return null;
+  }
 
   return (
     <main className="relative flex min-h-[calc(100vh-80px)] items-center justify-center overflow-hidden px-6 py-16">
@@ -30,7 +46,7 @@ export default async function Loginpage() {
             </p>
           </div>
 
-          <form className="space-y-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             <div>
               <label className="mb-2 block text-sm text-gray-400">Email</label>
 
@@ -38,7 +54,16 @@ export default async function Loginpage() {
                 type="email"
                 placeholder="you@example.com"
                 className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3.5 text-sm outline-none transition placeholder:text-gray-700 focus:border-purple-500/50"
+                {...register("email", {
+                  required: "Email is empty",
+                })}
               />
+
+              {errors.email && (
+                <p className="mt-2 text-sm text-red-400">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
 
             <div>
@@ -57,7 +82,50 @@ export default async function Loginpage() {
                 type="password"
                 placeholder="••••••••"
                 className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3.5 text-sm outline-none transition placeholder:text-gray-700 focus:border-purple-500/50"
+                {...register("password", {
+                  required: "Enter your password",
+                })}
               />
+
+              {errors.password && (
+                <p className="mt-2 text-sm text-red-400">
+                  {errors.password.message}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <input
+                type="tel"
+                placeholder="Enter your phone number"
+                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3.5 text-sm outline-none transition placeholder:text-gray-700 focus:border-purple-500/50"
+                {...register("phone", {
+                  required: "Phone is empty",
+                })}
+              />
+
+              {errors.phone && (
+                <p className="mt-2 text-sm text-red-400">
+                  {errors.phone.message}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <input
+                type="text"
+                placeholder="Enter your username"
+                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3.5 text-sm outline-none transition placeholder:text-gray-700 focus:border-purple-500/50"
+                {...register("username", {
+                  required: "Username is empty",
+                })}
+              />
+
+              {errors.username && (
+                <p className="mt-2 text-sm text-red-400">
+                  {errors.username.message}
+                </p>
+              )}
             </div>
 
             <label className="flex cursor-pointer items-center gap-3 text-sm text-gray-500">
