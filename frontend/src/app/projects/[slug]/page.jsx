@@ -2,6 +2,23 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import projects from "../projects";
 
+export async function generateStaticParams() {
+  const blogs = [
+    {
+      id: "1",
+    },
+    {
+      id: "2",
+    },
+    {
+      id: "3",
+    },
+  ];
+  return blogs.map((blog) => ({
+    id: blog.id,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
